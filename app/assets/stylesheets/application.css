@@ -1,15 +1,120 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  padding: 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+/* USERS PAGE STYLING HEEEEEEERE */
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.user-card, .bio-section, .posts-section, article {
+  padding: 10px;
+  box-shadow: 0 0 4px 2px rgb(202, 202, 202);
+}
+
+.user-card{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 100px;
+}
+
+.user-info{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.bio-section, .posts-section  {
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+.posts-list, .posts-container, .comments-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid rgb(206, 194, 218);
+  padding: 10px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.posts-list > .post-card {
+  border: 1px solid rgb(206, 194, 218);
+  padding: 10px;
+}
+
+.post-counters {
+  width: fit-content;
+  align-self: flex-end;
+  font-weight: 700;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.comment-author {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.main-post {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
