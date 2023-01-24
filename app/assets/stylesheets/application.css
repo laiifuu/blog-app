@@ -127,7 +127,6 @@ article {
   gap: 20px;
 }
 
-
 @media (min-width: 500px) {
   .post-counters {
     position: absolute;
@@ -136,5 +135,4 @@ article {
     font-weight: 700;
     margin-right: 20px;
   }
-  
 }
