@@ -14,5 +14,8 @@
     <% end %>
     </ul>
   </div>
-  <button>Show all posts</button>
+  <%= link_to user_posts_path(@user.id) do %>
+    <button>Show all posts</button>
+  <% end %>
+
 </section>
