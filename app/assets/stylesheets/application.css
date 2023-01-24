@@ -4,7 +4,8 @@
   padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -14,7 +15,7 @@ img {
 }
 
 body {
-  padding: 20px; 
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,6 +30,7 @@ button {
   border: none;
   cursor: pointer;
 }
+
 /* USERS PAGE STYLING HEEEEEEERE */
 .users-list {
   display: flex;
@@ -36,12 +38,15 @@ button {
   gap: 30px;
 }
 
-.user-card, .bio-section, .posts-section, article {
+.user-card,
+.bio-section,
+.posts-section,
+article {
   padding: 10px;
   box-shadow: 0 0 4px 2px rgb(202, 202, 202);
 }
 
-.user-card{
+.user-card {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -52,19 +57,22 @@ button {
   height: 100px;
 }
 
-.user-info{
+.user-info {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.bio-section, .posts-section  {
+.bio-section,
+.posts-section {
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
 }
 
-.posts-list, .posts-container, .comments-section {
+.posts-list,
+.posts-container,
+.comments-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -83,6 +91,7 @@ button {
   flex-direction: column;
   gap: 5px;
 }
+
 .posts-list > .post-card {
   border: 1px solid rgb(206, 194, 218);
   padding: 10px;
@@ -117,4 +126,3 @@ article {
   flex-direction: column;
   gap: 20px;
 }
-
