@@ -1,1 +1,23 @@
-<h1>This is the view to show all the posts for a specific user</h1>
+<%= render partial: "partials/user", locals: {user: @user} %>
+
+<section class="posts-section">
+  <h3>Posts</h3>
+  <div class="posts-container">
+    <ul class="posts-list">
+    <% @posts.each do |post| %>
+      <div class="post">
+      <%= render partial: "partials/post", locals: {post: post} %>
+      <h4>Comments: </h4>
+      <ul class="comments-list">
+        <% post.recent_comments.each do |comment| %> 
+          <li>
+          <%= render partial: "partials/comment", locals: {comment: comment} %>
+          </li>
+        <% end %>
+      </ul>
+      </div>
+    <% end %>
+    </ul>
+    <button>Show all posts</button>
+  </div>
+</section>
