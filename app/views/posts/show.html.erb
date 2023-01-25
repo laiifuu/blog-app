@@ -1,9 +1,11 @@
 <article>
   <section class="main-post">
+    <div>
     <h1><%= @post.title %> by <%= User.find(@post.author_id).name %></h1>
     <div class="post-counters">
       <span>Likes: <%= @post.likes_counter%></span>
       <span>Comments: <%= @post.comments_counter%></span>
+    </div>
     </div>
     <p><%= @post.text %></p>
   </section>

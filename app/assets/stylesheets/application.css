@@ -127,12 +127,9 @@ article {
   gap: 20px;
 }
 
-@media (min-width: 500px) {
-  .post-counters {
-    position: absolute;
-    right: 20px;
-    width: fit-content;
-    font-weight: 700;
-    margin-right: 20px;
-  }
+.main-post > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
 }
