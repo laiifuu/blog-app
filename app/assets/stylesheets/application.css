@@ -25,7 +25,8 @@ body {
   min-height: 100vh;
 }
 
-button, input[type="submit"] {
+button,
+input[type="submit"] {
   padding: 10px;
   border: none;
   align-self: flex-start;
@@ -137,16 +138,15 @@ article {
 
 form {
   width: 100%;
-  display: Flex;
+  display: flex;
   gap: 10px;
   flex-direction: column;
-  width: 100%;
   margin: 10px 0;
 }
 
-textarea, input {
+textarea,
+input {
   border: 1px solid rgb(168, 158, 250);
   padding: 10px;
   width: 100%;
 }
-
