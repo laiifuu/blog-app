@@ -15,20 +15,20 @@ class PostsController < ApplicationController
     @recent_user = current_user
   end
 
-  def new 
+  def new
     @post = Post.new
   end
 
   def create
-    user = self.current_user
+    user = current_user
     puts user
     @post = Post.new(
-      title: params[:post][:title], 
-      text: params[:post][:text], 
+      title: params[:post][:title],
+      text: params[:post][:text],
       author: user
     )
-    if @post.save
-      redirect_to user_posts_path
-    end
+    return unless @post.save
+
+    redirect_to user_posts_path
   end
 end
