@@ -1,0 +1,13 @@
+
+<section>
+<%= form_with model: @comment, html: {class: "comment-form"}, url: user_post_comments_path(author.id, post.id) do |form| %>
+  
+    <%= form.text_area :text %>
+    <%= form.hidden_field :post_id, value: post.id%>
+    <%= form.hidden_field :needed_id, value: user_id%>
+  
+  <%= form.submit "Add Comment" %>
+<% end %>
+</section>
+
+
