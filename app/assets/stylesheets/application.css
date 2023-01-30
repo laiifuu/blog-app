@@ -25,9 +25,11 @@ body {
   min-height: 100vh;
 }
 
-button {
+button,
+input[type="submit"] {
   padding: 10px;
   border: none;
+  align-self: flex-start;
   cursor: pointer;
 }
 
@@ -132,4 +134,19 @@ article {
   justify-content: space-between;
   gap: 20px;
   align-items: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+textarea,
+input {
+  border: 1px solid rgb(168, 158, 250);
+  padding: 10px;
+  width: 100%;
 }

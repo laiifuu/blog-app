@@ -15,8 +15,14 @@
           </li>
         <% end %>
       </ul>
+
+      <%= render partial: "partials/comment_form", locals: {post: post, author: @recent_user, user_id: @user.id} %>
+      
       </div>
     <% end %>
     </ul>
+    <%= link_to new_user_post_path(@user.id) do %>
+    <button>Create new Post</button>
+    <% end %>
   </div>
 </section>

@@ -8,6 +8,8 @@
     </div>
     </div>
     <p><%= @post.text %></p>
+
+    <%= render partial: "partials/like_form", locals: {author_id: @post.author_id, post_id: @post.id} %>
   </section>
 
   <section class="comments-section">
@@ -20,5 +22,6 @@
   <% end %>
   </ul>
 
+  <%= render partial: "partials/comment_form", locals: {post: @post, author: @recent_user, user_id: @post.author_id} %>
   </section>
 </article>
