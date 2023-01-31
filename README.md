@@ -83,6 +83,12 @@ Then install the project's necessary dependencies with:
 - GitHub: [@laiifuu](https://github.com/laiifuu)
 - Twitter: [@hayet_fe](https://twitter.com/hayet_fe)
 
+￼ **Tarik Bouari**
+
+- GitHub: [@tarikbouari](https://github.com/tarikbouari)
+- Twitter: [@tarikbouari](https://twitter.com/tarikbouari)
+- LinkedIn: [tarikbouari](https://linkedin.com/tarikbouari)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
