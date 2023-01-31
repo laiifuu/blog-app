@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   def index
     user_id = params[:user_id]
-    @user = User.find(user_id)
-    @posts = Post.where(author_id: user_id)
+    @user = User.includes(posts: { comments: [:author] }).find(user_id)
+    @posts = @user.posts
     @recent_user = current_user
   end
 
