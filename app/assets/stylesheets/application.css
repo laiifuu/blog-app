@@ -52,6 +52,7 @@ article {
   display: flex;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 
 .profile-picture {
@@ -70,6 +71,7 @@ article {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .posts-list,
@@ -149,4 +151,22 @@ input {
   border: 1px solid rgb(168, 158, 250);
   padding: 10px;
   width: 100%;
+}
+
+
+.auth {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .auth {
+    width: 768px;
+  }
+
+  .user-card {
+    width: 420px;
+  }
 }
