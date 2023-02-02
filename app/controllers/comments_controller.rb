@@ -10,4 +10,13 @@ class CommentsController < ApplicationController
 
     redirect_to request.original_url
   end
+
+  def destroy
+    post = Post.find(params[:post_id])
+    post.comments_counter -= 1
+    Comment.delete(params[:id])
+    post.save
+
+    redirect_to user_posts_path
+  end
 end
