@@ -4,7 +4,7 @@ class Ability
   def initialize(user)
     can :read, Post
 
-    if user.role == "user"
+    if user.role == 'user'
       can :create, Post
       can :destroy, Post, author_id: user.id
       can :create, Comment
