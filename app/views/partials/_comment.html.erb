@@ -1,7 +1,7 @@
 <div class="comment">
   <span class="comment-author"><%= User.find(comment.author_id).name %></span>:
   <span class="comment-text"><%= comment.text %></span>
-  <% if @recent_user.id == comment.author_id %>
+  <% if can? :destroy, comment %>
     <%= button_to "Delete", user_post_comment_path(@user.id, post.id, comment.id), method: :delete, data: {turbo: false}%>
   <% end %>
 </div>

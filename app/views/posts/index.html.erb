@@ -18,7 +18,7 @@
 
       <%= render partial: "partials/comment_form", locals: {post: post, author: @recent_user, user_id: @user.id} %>
       
-      <% if @recent_user.id == post.author_id %>
+      <% if can? :destroy, post %>
       <%= button_to "Delete Post", user_post_path(@user.id, post.id), method: :delete, data: {turbo: false}%>
       <% end %>
       </div>
