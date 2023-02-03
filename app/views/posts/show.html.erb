@@ -17,7 +17,7 @@
   <ul class="comments-list">
   <% @comments.each do |comment| %>
     <li>
-    <%= render partial: "partials/comment", locals: {comment: comment} %>
+    <%= render partial: "partials/comment", locals: {comment: comment, post: @post} %>
     </li>
   <% end %>
   </ul>

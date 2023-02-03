@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     user_id = params[:user_id]
     @user = User.includes(posts: { comments: [:author] }).find(user_id)
@@ -20,15 +22,25 @@ class PostsController < ApplicationController
   end
 
   def create
-    user = current_user
-    puts user
-    @post = Post.new(
-      title: params[:post][:title],
-      text: params[:post][:text],
-      author: user
-    )
+    author = User.find(params[:user_id])
+    @post = Post.new(post_params)
+    @post.author = author
     return unless @post.save
 
     redirect_to user_posts_path
+  end
+
+  def destroy
+    Post.delete(params[:id])
+    user = User.find(params[:user_id])
+    user.posts_counter -= 1
+    user.save
+    redirect_to user_posts_path
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end

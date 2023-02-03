@@ -11,16 +11,20 @@
       <ul class="comments-list">
         <% post.recent_comments.each do |comment| %> 
           <li>
-          <%= render partial: "partials/comment", locals: {comment: comment} %>
+          <%= render partial: "partials/comment", locals: {comment: comment, post: post} %>
           </li>
         <% end %>
       </ul>
 
       <%= render partial: "partials/comment_form", locals: {post: post, author: @recent_user, user_id: @user.id} %>
       
+      <% if can? :destroy, post %>
+      <%= button_to "Delete Post", user_post_path(@user.id, post.id), method: :delete, data: {turbo: false}%>
+      <% end %>
       </div>
     <% end %>
     </ul>
+
     <%= link_to new_user_post_path(@user.id) do %>
     <button>Create new Post</button>
     <% end %>
