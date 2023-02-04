@@ -11,7 +11,7 @@ class ApiCommentsController < ApiController
     if User.exists?(user_id) && Post.exists?(post_id)
       comment = Comment.create(text:, author_id: user_id, post_id:)
       render json: comment, status: :created
-    else 
+    else
       render json: 'Cannot create the comment', status: :unprocessable_entity
     end
   end
