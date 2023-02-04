@@ -15,8 +15,8 @@ Rails.application.routes.draw do
     resources :likes, only: [:create]
   end
 
-  get 'api/v1/posts', to: "api#return_posts"
-  get 'api/v1/posts/:post_id/comments', to: "api#return_comments"
-  get 'api/v1/posts/:post_id/comments/:text', to: "api#create_comment"
+  get 'api/v1/posts', to: "api_posts#return_posts"
+  get 'api/v1/posts/:post_id/comments', to: "api_comments#return_comments"
+  post 'api/v1/posts/:post_id/comments', to: "api_comments#create_comment"
 end
 end
